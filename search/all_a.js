@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['odom_2ecpp_0',['odom.cpp',['../odom_8cpp.html',1,'']]],
-  ['odom_2ehpp_1',['odom.hpp',['../odom_8hpp.html',1,'']]],
-  ['odomsensors_5ft_2',['OdomSensors_t',['../structlemlib_1_1OdomSensors__t.html',1,'lemlib']]],
-  ['operator_2a_3',['operator*',['../classlemlib_1_1Pose.html#a28b91d943426c46a53d1335c148cb790',1,'lemlib::Pose::operator*(const Pose &amp;other)'],['../classlemlib_1_1Pose.html#a1b050556e9c8800819ac68b65a1e455b',1,'lemlib::Pose::operator*(const float &amp;other)']]],
-  ['operator_2b_4',['operator+',['../classlemlib_1_1Pose.html#af1f92459bbb366dad6b7fba40fd0fbfb',1,'lemlib::Pose']]],
-  ['operator_2d_5',['operator-',['../classlemlib_1_1Pose.html#accf67cfae9b9c68b5bdf562c2903edb4',1,'lemlib::Pose']]],
-  ['operator_2f_6',['operator/',['../classlemlib_1_1Pose.html#adc98b93d1894165d02b1a632bfc14f19',1,'lemlib::Pose']]]
+  ['odom_2ehpp_0',['odom.hpp',['../odom_8hpp.html',1,'']]],
+  ['odomsensors_5ft_1',['OdomSensors_t',['../structlemlib_1_1OdomSensors__t.html',1,'lemlib']]],
+  ['operator_2a_2',['operator*',['../classlemlib_1_1Pose.html#a28b91d943426c46a53d1335c148cb790',1,'lemlib::Pose::operator*(const Pose &amp;other)'],['../classlemlib_1_1Pose.html#ad7d715e5dfc47f7f7a9420adb0db34d5',1,'lemlib::Pose::operator*(const float &amp;other)']]],
+  ['operator_2b_3',['operator+',['../classlemlib_1_1Pose.html#a68005ad7fa4d64f3551da8df4f25b72a',1,'lemlib::Pose']]],
+  ['operator_2d_4',['operator-',['../classlemlib_1_1Pose.html#a082d09a9eca7421715da45d6f9a06336',1,'lemlib::Pose']]],
+  ['operator_2f_5',['operator/',['../classlemlib_1_1Pose.html#a1b724c33e72816b54c84d23b5dd3e4fb',1,'lemlib::Pose']]]
 ];

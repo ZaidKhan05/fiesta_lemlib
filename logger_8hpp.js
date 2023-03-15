@@ -12,7 +12,7 @@ var logger_8hpp =
     [ "error", "logger_8hpp.html#ad8ac7356c901297d33d6705087daeed3", null ],
     [ "fatal", "logger_8hpp.html#aa906aec4e2f9f1546b8919e928ea793b", null ],
     [ "fatal", "logger_8hpp.html#a3af99589274519baa373ac55632ea024", null ],
-    [ "getLowestLevel", "logger_8hpp.html#a77de5f8f41de64067af0a589e30de9ac", null ],
+    [ "getLowestLevel", "logger_8hpp.html#a09806ceaef2b69207c0b1dc6da694f31", null ],
     [ "info", "logger_8hpp.html#adbb85eb079a1fb8a619d2865f664bad6", null ],
     [ "isDebug", "logger_8hpp.html#a2bfa4c413a424797a5a701ec6f780470", null ],
     [ "isVerbose", "logger_8hpp.html#a2633e67214e3d01e154d7f2564063e04", null ],
