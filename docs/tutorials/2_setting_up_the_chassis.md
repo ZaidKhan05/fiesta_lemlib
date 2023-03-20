@@ -15,7 +15,7 @@ In [PROS](https://pros.cs.purdue.edu/v5/api/cpp/index.html), setting up a motor 
 ```cpp
 pros::Motor left_front_motor(1, pros::E_MOTOR_GEARSET_06, false); // port 1, blue gearbox, not reversed
 pros::Motor left_back_motor(2, pros::E_MOTOR_GEARSET_18, false); // port 2, green gearbox, not reversed
-pros::Motor right_front_motor(3, pros::E_MOTOR_GEARSET_36, true); // port 3, red gearbox, reversed
+pros::Motor right_front_motor(3, pros::E_MOTOR_GEARSET_36, true); // port 3,	 red gearbox, reversed
 pros::Motor right_back_motor(4, pros::E_MOTOR_GEARSET_36, true); // port 4, red gearbox, reversed
 ```
 
