@@ -1,31 +1,26 @@
 #include "main.h"
 #include "lemlib/api.hpp"
-#include "pros/misc.h"
-#include "pros/adi.hpp"
-#include "pros/misc.h"
-#include "pros/motors.h"
-#include "pros/motors.hpp"
-#include "pros/rtos.h"
-#include "pros/rtos.hpp"
+
 
 // drive motors
-pros::Motor lF(20, pros::E_MOTOR_GEARSET_18); // left front motor. port 3, reversed
-pros::Motor lB(12, pros::E_MOTOR_GEARSET_18); // left back motor. port 12, reversed
-pros::Motor rF(19, pros::E_MOTOR_GEARSET_18); // right front motor. port 19
-pros::Motor rB(11, pros::E_MOTOR_GEARSET_18); // right back motor. port 1
+pros::Motor lF(-3, pros::E_MOTOR_GEARSET_06); // left front motor. port 3, reversed
+pros::Motor lM(-14, pros::E_MOTOR_GEARSET_06); // left middle motor. port 14, reversed
+pros::Motor lB(-12, pros::E_MOTOR_GEARSET_06); // left back motor. port 12, reversed
+pros::Motor rF(19, pros::E_MOTOR_GEARSET_06); // right front motor. port 19
+pros::Motor rM(20, pros::E_MOTOR_GEARSET_06); // right middle motor. port 20
+pros::Motor rB(1, pros::E_MOTOR_GEARSET_06); // right back motor. port 1
 
 // motor groups
-pros::MotorGroup leftMotors({lF, lB}); // left motor group
-pros::MotorGroup rightMotors({rF, rB}); // right motor group
+pros::MotorGroup leftMotors({lF, lM, lB}); // left motor group
+pros::MotorGroup rightMotors({rF, rM, rB}); // right motor group
 
 // Inertial Sensor on port 6
-pros::Imu imu(21);
-pros::Controller master(pros::E_CONTROLLER_MASTER);
+pros::Imu imu(6);
 
-// // tracking wheels
-// pros::ADIEncoder verticalEnc('A', 'B', false);
-// // vertical tracking wheel. 2.75" diameter, 2.2" offset
-// lemlib::TrackingWheel vertical(&verticalEnc, 2.75, 0);
+// tracking wheels
+pros::ADIEncoder verticalEnc('A', 'B', false);
+// vertical tracking wheel. 2.75" diameter, 2.2" offset
+lemlib::TrackingWheel vertical(&verticalEnc, 2.75, 0);
 
 
 // drivetrain
@@ -33,8 +28,8 @@ lemlib::Drivetrain_t drivetrain {
 	&leftMotors,
 	&rightMotors,
 	10,
-	4.125,
-	200
+	3.25,
+	360,
 };
 
 // lateral motion controller
@@ -81,8 +76,7 @@ lemlib::Chassis chassis(drivetrain, lateralController, angularController, sensor
 void initialize() {
 	pros::lcd::initialize();
 	// calibrate sensors
-	chassis.calibrate(); // calibrate the chassis
-    chassis.setPose(0, 0, 0); // X: 0, Y: 0, Heading: 0
+	chassis.calibrate();
 	while (true) {
 		pros::lcd::print(0, "X: %f", chassis.getPose().x);
 		pros::lcd::print(1, "Y: %f", chassis.getPose().y);
@@ -109,9 +103,7 @@ void disabled() {}
  * This task will exit when the robot is enabled and autonomous or opcontrol
  * starts.
  */
-void competition_initialize() {
-
-}
+void competition_initialize() {}
 
 
 /**
@@ -126,7 +118,7 @@ void competition_initialize() {
  * from where it left off.
  */
 void autonomous() {
-	chassis.moveTo(0, 10, 4000);
+	chassis.moveTo(20, 0, 4000);
 }
 
 
@@ -144,11 +136,4 @@ void autonomous() {
  * task, not resume it from where it left off.
  */
 void opcontrol() {
-		master.print(1, 0, "e");
-
-	while(true){
-	leftMotors.move(master.get_analog(ANALOG_LEFT_Y));
-	rightMotors.move(master.get_analog(ANALOG_RIGHT_Y));
-	master.print(0, 0, "e");
-	}
 }

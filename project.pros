@@ -4,6 +4,29 @@
         "project_name": "LemLib",
         "target": "v5",
         "templates": {
+            "LemLib": {
+                "location": "C:\\Users\\Nikhil Gajjar\\AppData\\Roaming\\PROS\\templates\\LemLib@0.4.5",
+                "metadata": {
+                    "origin": "local"
+                },
+                "name": "LemLib",
+                "py/object": "pros.conductor.templates.local_template.LocalTemplate",
+                "supported_kernels": "^3.8.0",
+                "system_files": [
+                    "include\\lemlib\\api.hpp",
+                    "firmware\\LemLib.a",
+                    "include\\lemlib\\chassis\\odom.hpp",
+                    "include\\lemlib\\logger.hpp",
+                    "include\\lemlib\\util.hpp",
+                    "include\\lemlib\\chassis\\trackingWheel.hpp",
+                    "include\\lemlib\\pid.hpp",
+                    "include\\lemlib\\chassis\\chassis.hpp",
+                    "include\\lemlib\\pose.hpp"
+                ],
+                "target": "v5",
+                "user_files": [],
+                "version": "0.4.5"
+            },
             "kernel": {
                 "location": "C:\\Users\\eduar\\AppData\\Roaming\\PROS\\templates\\kernel@3.8.0",
                 "metadata": {
